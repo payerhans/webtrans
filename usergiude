@@ -1,0 +1,422 @@
+User Guide How to get the most out of LiquidFiles
+
+This is the User Guide for LiquidFiles. It will give basic guidelines how to use LiquidFiles, and also
+      walk through the available settings to make sure you get the most from using it.
+
+Sending Files Using the standard compose window
+This is how the main compose window looks in LiquidFiles:
+
+When sending files, these are the steps and options available:
+
+Select recipients in the same way as a web based email system, please select To, CC and BCC email 
+    addresses to your recipients.
+Type the Subject and Message to your recipients.
+Add Files, you can add files up to the max size displayed in the limitations section 10).
+When you're ready, please hit Send. If uploads are taking a long time, you can check the checkbox to
+    "send when uploads are done".
+If you have sent any files previously, you can send them again without uploading them again.
+Pool files are files that an administrator can make available for groups of users that they send repeatadly,
+    like a large companywide presentation and similar.
+Select Download Permission for your recipients. See the Forwarding Permissions
+    section for a complete description.
+When the message expires. After this day, the attached files will be deleted.
+If set, each recipient can only download each file this number of times. If the download
+    permission is set to "Anyone", each download by anyone is counted towards the limit.
+  
+Send a copy to your own email address (for storage in your sent folder).
+A Private Message is a message where the Message is not included in the email sent to the recipients. When
+    sending a Private Message:
+    
+The recipients will get a generic email telling them to click on the link to view the message.
+You will get a read receipt when the recipient has viewed the message as well as when any
+      attachments has been downloaded.
+You can send a Private Message without any attachments.
+It's not possible to send a Private Message with the permission that Anyone can download —
+      in order to send a Private Message, authentication is required.
+
+
+Limitations — Message Size, Quota and File Extension Limitations.
+
+Back to top
+
+Forwarding Permissions
+
+
+
+Permission
+Require Authentication
+Download Receipt
+Description
+
+
+
+
+Only Specified Recipients
+Yes
+When each recipient download each file.
+Only the recipients you have specified in the
+        To, CC and BCC fields will be able to download the files. It won't be possible to forward the email or
+        message URL to anyone.
+      
+
+
+Only Specified Recipients and Local users
+Yes
+When each recipient download each file.
+In addition to the Specified Recipients,
+        any files sent may also be downloaded by any local users on the system by forwarding the email
+        or sending the message URL.
+
+
+Only Specified Recipients and Respective Domain Users can access
+Yes
+When each recipient download each file.
+In addition to the Specified Recipients, 
+	  any files sent may also be downloaded by any user with same email domain as the email domain 
+	  of the first recipient by forwarding the email or sending the message URL.
+
+
+Anyone after authentication
+Yes
+When each recipient download each file.
+Anyone may download the files. Use this option to
+        post the Public Message URL in public forums, on web pages or anywhere where you want to make the files available.
+        When the user visits the Public URL, they will be asked to authenticate by providing their email address
+        and a confirmation.
+
+
+Anyone
+No
+Once per file, when someone has downloaded the file.
+Anyone may download the files. Use this option when you don't want your recipients to have to
+        authenticate to download the files. The downside is that since we don't authenticate the recipients,
+        we don't know who downloaded what.
+
+
+
+Back to top
+
+Uploading the Files
+There are two methods for uploading files — HTML 5 and Legacy. The most commonly used browsers support the HTML 5 upload mechanism
+  except Internet Explorer until version 10. Please see the
+  Browser Support section for a complete list of supported browsers.
+When uploading using a HTML 5 compliant browser, files are uploaded as you compose the message and looks like this:
+
+When uploading using a Legacy browser (Internet Explorer 9 and below, and really old 
+  (and unsupported) versions of Firefox, Chrome & Safari),
+  files are not uploaded when you select them. Instead, the bottom of the compose page will look like this:
+
+In this case, you will see the browser limitation in the Limitations section, and you will see the files selected at the
+  bottom of the page. When you hit send, you will see an upload window like this:
+
+Please note that LiquidFiles checks for the presence of the required HTML 5 File.API. There is no check for specific
+browser versions when it comes to selecting HTML 5 vs Legacy upload mechanisms. If Microsoft decides to add support for 
+the HTML 5 File.API in Internet Explorer 9 (very unlikely), it will automatically be picked up and used in LiquidFiles.
+Back to top
+
+Processing Uploaded Files
+When large files are sent (with the HTML 5 method), they are split into 100 Mb blocks. All files are also scanned for viruses.
+  This can take some time on a busy system and the files are
+  placed in a queue for reassembly and AV scan. As per the notice beneath the files, you don't have to wait for this to
+  complete to send the message. In the unlikely event of an infected file, the file will be automatically deleted before anyone
+  can download the file.
+
+Back to top
+
+Browser Support
+LiquidFiles pushes some boundaries of what’s possible with browsers.
+  In general, the two most recent major releases of the four most popular browsers are supported,
+  except with Internet Explorer where the three most recent major releases are supported.
+Please see the matrix below for different browser versions and their limitations:
+
+
+
+Browser
+Upload Mechanism
+Max Download
+Max Upload
+
+
+
+
+Microsoft Edge
+HTML 5
+No Limit
+No Limit
+
+
+Internet Explorer 11
+HTML 5
+No Limit
+No Limit
+
+
+Internet Explorer 10
+HTML 5
+No Limit
+No Limit
+
+
+Internet Explorer 9
+Legacy
+No Limit
+4 Gb
+
+
+Internet Explorer 8
+Legacy
+No Limit
+2 Gb
+
+
+Chrome
+HTML 5
+No Limit
+No Limit
+
+
+Firefox
+HTML 5
+No Limit
+No Limit
+
+
+Safari
+HTML 5
+No Limit
+No Limit
+
+
+
+LiquidFiles will automatically detect the presence of the HTML 5 File.API needed to send files with unlimited
+  file size. While there is some support for HTML5 in IE9, it doesn't support the File.API. Internet Explorer 10 
+  is the first version of Internet Explorer to support the HTML 5 File.API.
+The Send limitations are limitations in each browser. It’s not possible to "fix" Internet Explorer 8 or 9 to
+  send a 8Gb file, these are the inherit limits of those browsers.
+The Browser file size limitation problem is compounded with a sort of - how do we describe 30 hours on a 12 hour clock? 2 revolutions and
+  6 o'clock. But since the equivalent of revolutions doesn't exists, all we're left with is 6 o'clock, or back
+  in computer land - a 5 Gb file uploaded in IE9 will be uploaded as a 1Gb file. It just "turns over" every 4Gb.
+  The following message is shown if someone has a setting that would allow them to upload a larger file, but
+  their browser prevents them:
+
+Since we cannot detect properly in this case if someone have selected a larger than 4Gb file, this is so far
+  the best we can do, and probably the way it's going to stay until IE 11 or 12 when we can (finally) end
+  support for the non HTML5 compliant versions of Internet Explorer.
+Back to top
+
+The Recipients Email
+When you have clicked Send, an email will be sent to your recipients. Depending on what system they use to
+  read the email it will look a little bit different, and something like this:
+
+You will see:
+
+The email header with the To, From, Subject and so on at the top.
+The message typed in the message field in the compose window.
+The Files attached to the message header that begins the LiquidFiles added part.
+Each file sent is then listed together with the filename, file size and checksum.
+Beneath the files is the link the recipient will have to click to download the message.
+There is a notice if the email or download link can be forwarded to other users depending on the 
+    permission settings when the message was sent.
+There's an expiration notice alerting the user when they will have to download the files by.
+And finally there's a Message ID which is a unique ID that can be used when searching for this message in the LiquidFiles system.
+
+A couple of things to note:
+
+There's obviously no files attached directly in this email. All the files are store on the LiquidFiles system.
+When the message expires, the attachments will be automatically deleted. It's not possible to restore files
+    that have been deleted.
+
+Back to top
+
+Checksum or how to verify the integrity of the downloaded files
+A checksum,
+  or hash is a way
+  to verify the integrity of the downloaded files, to verify that the download was successful.
+It works by applying a cryptographic calculation on a file of any size and it will output a short
+  checksum, or hash, that represents the message or file.
+The trick with checksums or hashes is that every time they calculate the checksum for the same file, they will produce
+  the same checksum. And if the file changes only one single bit, the calculation will produce a different checksum.
+So when you receive a message from the LiquidFiles system, and it displays a checksum like: 
+  36f037e00350864828a507420a50689eb473cb919df6b4b6205f3e09c913e0cb you can use a
+  Checksum Tool
+  to calculate the checksum of the file you downloaded. LiquidFiles uses SHA-256 as its checksum function
+  (sometimes referred to as SHA2-256).
+If the checksum is the same, the file you have downloaded is identical to the one sent from the LiquidFiles system.
+If the checksum is not the same, the file you downloaded is not the same as the one sent from the LiquidFiles system.
+So as an example, lets say that we received a message with the following attachment:
+
+We use a Windows applications from the list of 
+Checksum Tools at Wikipedia to calculate the
+checksum of the file we downloaded, selecting SHA2-256 as the checksum function (or hash type).
+
+As you can see, the checksum in the message is the same as from the downloaded file. The file must be identical to the
+  one on the LiquidFiles system.
+Back to top
+
+Receive Files
+
+
+Request Files an easy way to receive files with no prior registration required
+File Requests provides an easy way for you to request files from someone. The system will make it very easy so that
+  there's no need to do any further explanation, or walk someone through the process over the phone.
+You Request the Files by clicking on the
+  File Request button in the main compose page.
+
+This will open up a popup window that you can fill in like this:
+
+When you click on the Request File button, an email will be delivered (to meg@external.com in our example)
+  with a unique File Request link. The email will look something like this:
+
+And when the user clicks on the File Request, they will be taken to a page that will look something like this:
+
+Where they can send the Requested Files back to the requester.
+A couple of things to note:
+
+The Link is one time use only and will expire when the files have been delivered. If you need something to be used more than once, please look at using the Filedrop instead.
+The user that got the link doesn't need to register or do anything other than clicking on the link in the email, and
+    since they got the email with the link, we know that the email address is valid.
+
+Back to top
+
+Filedrop an easy way to receive files with no prior registration required
+A Filedrop is a permanent URL that you can use to receive files. You can for instance:
+
+Add this link to your email signature.
+Post in forums and other public places where you also would be comfortable to post your email address.
+Send to anyone in a private email for them to use when sending files to you repeatedly.
+
+You can get your Filedrop link by going to the Account Section. It will look something like this:
+
+You will see two links, one random and one with your email address.
+
+The random link is a link which can't be guessed so it is safer to post in places when you're not sure
+  if you want to share your email address. If the link ever falls in the wrong hands, you can always
+  go back to this page and click on the "Reset Filedrop URL" button. This will generate a new random
+  Filedrop URL for you. Please note that this will automatically expire your previous URL so anyone
+  who will try to use the previous URL will get a 404 page not found message.
+The link with your email looks nicer and is easier to validate if someone has to type it in. But this
+  link will never expire (unless you change email address).
+When someone visits your Filedrop URL (https://liquidfiles.company.com/filedrop/~VZ209z in this example), they will see a page like this:
+
+Anyone who visits this page will be able to send files to you by filling in all the fields, clicking on the
+  "Add Files" button and clicking "Send". Please note that there is no "To" field. Since this is your
+    Filedrop URL, all files sent here will always be delivered to you.
+Back to top
+
+
+FileLinks
+
+Using FileLinks an easy way to send links to individual file
+FileLinks are direct links to files. The primary use case is to be able to send links to files when
+  you don't necessarily know the recipient before hand, or just want something quick and easy. It's also great
+  for posting links in oline forums, in instant messaging apps and so on.
+The FileLink interface can be reached by selecting FileLink in the menubar.
+
+The main FileLink interface looks like this, with the following options.
+
+
+The Tab to create new FileLinks.
+The Tab to list existing FileLinks.
+The Tab to list available files, so that you can create FileLinks without uploading new files.
+Selecting a new file to create the FileLink.
+Creating the FileLink after the file has been selected.
+Limitations on file size and file type will be listed here.
+
+Creating a FileLink
+When selecting a file, you will have the following options.
+
+
+The selected file, with file size and remove button.
+When the FileLink expires. After this date, anyone visiting the FileLink won't be able to access it.
+When enabled, you will receive a confirmation email after each download of the FileLink.
+When enabled, each user will be required to authenticate before accessing the FileLink. If the user
+    doesn't have an account on the LiquidFiles system, they will authenticate with their email address.
+When you're ready, Create Link to create the FileLink.
+
+The FileLink Page
+When a user is visiting the FileLink, they will see the following page.
+
+
+The file details including filename, file size and SHA-256 checksum.
+The download button.
+
+When you will visit one of your own FileLink pages, will see the following page.
+
+
+The file details including filename, file size and SHA-256 checksum (same as any other user).
+The download button (same as any other user).
+The FileLink expiration date.
+Clicking the copy FileLink to clipboard button will copy the URL to the FileLink to the clipboard.
+Toggle Download Receipts on and off.
+Toggle Require Authentication on and off.
+
+Using the "Copy FileLink to Clipboard" function, you can now copy
+  the FileLink in a chat message, post on a forum, post in SharePoint or anywhere else where you want to make this
+  file available.
+
+
+Plugins
+
+
+Using the Outlook Plugin
+If your administrator has installed and enabled the Outlook plugin, when you're composing a message in Outlook, you will
+  see an additional section, like this:
+
+These are the selectable options in the LiquidFiles Secure Attach Dropdown menu:
+
+Secure Attach — any file you would normally attach using the attach icon on Outlook can be attached using this
+    Secure Attach button instead. This will cause any file attached to the email to be sent using LiquidFiles.
+Attach Folder — you can also attach a folder at once and all files in this folder will be attached to this email.
+Secure Attach All — the Outlook plugin will automatically send large files through LiquidFiles. If you have
+    a combination of larger and smaller attachments, that means that some will go through LiquidFiles and some direct. By
+    Selecting Secure Attach All, all files, large and small, will be sent through LiquidFiles.
+File Request — use LiquidFiles to request a large and/or sensitive file from someone. The receipient of
+    the File Request will receive a link they can use and any files attached will be delivered safely back to you.
+Private Message — this will cause the body of the email to be sent securely through LiquidFiles with or without
+    any attachments. You will get confirmation when someone has opened your email as well as downloaded any attachments.
+Select Existing Files — this will list already uploaded files from previous messages that you can send again
+    without having to upload.
+Options — configure the LiquidFiles Outlook plugin.
+
+Sending a file through LiquidFiles
+When you have selected a file to attach and send through LiquidFiles, another pane will open up like this:
+
+Here you can see the attached file with some basic settings for this message. For more advanced settings, please look in the ribbon:
+
+Or as a close-up:
+
+In the top ribbon you can see the LiquidFiles settings for this message, from the top left:
+
+You can choose to send this message requiring Authentication to access.
+You can choose to send this message as a Private Message (when the body of the email is sent privately through LiquidFiles).
+You can select the Access Permission, same as you would see in the web interface. In the screenshot,
+    "Only Specified Recipients can access".
+How many times each recipient can download each file.
+When the message will expire.
+
+Outlook Settings and configuration
+When you attach your first file to LiquidFiles, you will see the login window:
+
+This has the LiquidFiles server address, if the plugin should connect with http, https or automatically detect, and
+  your username and password. The username and password is the same username and password as you login to the LiquidFiles
+  web interface.
+
+  Please note that you only have to fill this in once and the LiquidFiles Outlook plugin will keep you logged in even if you
+  change your network password.
+
+The Settings Window looks like this:
+
+And has the following configurable settings, from the top:
+
+It displays the currently logged in user.
+How many files you can attach at once and how long you want to see the window visible after you've sent the files.
+Where you want the LiquidFiles Attachment information to be placed 
+    (please see the recipient email to see how the attachment information looks).
+Send the message using HTML or plain text, or do not send any message through LiquidFiles.
+The settings to automatically send attachment above a certain size will attach files to LiquidFiles regardless
+    if you have clicked the "normal" attach or the secure attach button if the file is above this size.
+        
+
+
+
+

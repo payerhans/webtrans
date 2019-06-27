@@ -1,0 +1,45 @@
+User Guide How to get the most out of LiquidFiles
+
+This is the User Guide for LiquidFiles. It will give basic guidelines how to use LiquidFiles, and also
+      walk through the available settings to make sure you get the most from using it.
+
+Sending Files Using the standard compose window
+This is how the main compose window looks in LiquidFiles:
+
+When sending files, these are the steps and options available:
+
+Select recipients in the same way as a web based email system, please select To, CC and BCC email 
+    addresses to your recipients.
+Type the Subject and Message to your recipients.
+Add Files, you can add files up to the max size displayed in the limitations section 10).
+When you're ready, please hit Send. If uploads are taking a long time, you can check the checkbox to
+    "send when uploads are done".
+If you have sent any files previously, you can send them again without uploading them again.
+Pool files are files that an administrator can make available for groups of users that they send repeatadly,
+    like a large companywide presentation and similar.
+Select Download Permission for your recipients. See the Forwarding Permissions
+    section for a complete description.
+When the message expires. After this day, the attached files will be deleted.
+If set, each recipient can only download each file this number of times. If the download
+    permission is set to "Anyone", each download by anyone is counted towards the limit.
+  
+Send a copy to your own email address (for storage in your sent folder).
+A Private Message is a message where the Message is not included in the email sent to the recipients. When
+    sending a Private Message:
+    
+The recipients will get a generic email telling them to click on the link to view the message.
+You will get a read receipt when the recipient has viewed the message as well as when any
+      attachments has been downloaded.
+You can send a Private Message without any attachments.
+It's not possible to send a Private Message with the permission that Anyone can download —
+      in order to send a Private Message, authentication is required.
+
+
+Limitations — Message Size, Quota and File Extension Limitations.
+
+Back to top
+
+Forwarding Permissions
+
+
+
